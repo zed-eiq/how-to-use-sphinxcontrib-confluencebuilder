@@ -107,12 +107,24 @@ latex_show_urls = 'footnote'
 
 # sphinxcontrib.confluencebuilder options
 confluence_publish = True
-# confluence_purge = True
-confluence_space_name = 'PINTTEST'
+
+"""
+..  WARNING: DO NOT ENABLE unless you know what you're doing.
+    
+    Set to ``False`` by default.
+
+    When ``confluence_purge`` is enabled,
+    it cleans out *everything* under ``confluence_parent_page``
+    and publishes fresh copies of the contents of this
+    repository to it.
+"""
+confluence_purge = False # True
+
+confluence_space_name = 'DEV'
 # Published pages will be placed directly under
 # f"{confluence_space_name}:{confluence_parent_page}"
 # page must already exist
-confluence_parent_page = 'Integrations'
+confluence_parent_page = 'Build pages with Sphinx and rST'
 # confluence_publish_prefix = 'PINT'
 # (or for confluence server)
 confluence_server_url = 'https://docs.eclecticiq.com/'

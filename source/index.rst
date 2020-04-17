@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PINT Documentation's documentation!
+Getting started with sphinxcontrib-confluencebuilder
 ********************************************************
 
 .. toctree::
@@ -11,60 +11,40 @@ Welcome to PINT Documentation's documentation!
    :caption: Contents:
    :hidden:
 
-   test-page-1
+   rst-reference
 
-`docutils reference`_
+..  contents:: Table of contents
 
-Admonitions
-============
+Introduction
+===============
 
-.. NOTE:: This is a NOTE admonition!
+This is a guide to using reStructuredText and Sphinx.
 
-.. IMPORTANT:: This is an IMPORTANT admonition!
+:reStructuredText:
+  …is a markdown language (note: not *Markdown*) that
+  is used in Sphinx. It is a feature rich language that,
+  unfortunately, shares a predeliction for whitespace
+  and magic with Python. But that *also* makes it
+  a suitable markdown language for use
+  with documenting Python code-bases.
+:Sphinx:
+  …is a Python-based static-site generator used
+  to build documentation for Python code-bases.
+  
+  It has a powerful ``autodoc`` utility that can
+  extract comments from ``.py`` files and generate
+  documentation from it.
 
-.. DANGER:: This is dangerous!
+- **Repository for this set of Confluence pages**: https://github.com/zed-eiq/how-to-use-sphinxcontrib-confluencebuilder
+- sphixncontrib-confluencebuilder GitHub: https://github.com/sphinx-contrib/confluencebuilder
+- Forked: https://github.com/zed-eiq/confluencebuilder
+- Documentation: https://sphinxcontrib-confluencebuilder.readthedocs.io/en/stable/index.html
 
-.. WARNING:: This is a warning!
+Getting started — the easy way
+================================================
 
-.. TIP:: This is a tip!
+Getting started from scratch
+==================================
 
-Tables
-=========
-
-.. csv-table::
-   :widths: 15 10 30
-   :header-rows: 1
-
-   this, is, a
-   csv, table,
-
-.. table:: Truth table for "not"
-   :widths: auto
-
-   =====  =====
-     A    not A
-   =====  =====
-   False  True
-   True   False
-   =====  =====
-
-.. list-table:: Frozen Delights!
-   :widths: 15 10 30
-   :header-rows: 1
-
-   * - Treat
-     - Quantity
-     - Description
-   * - Albatross
-     - 2.99
-     - On a stick!
-   * - Crunchy Frog
-     - 1.49
-     - If we took the bones out, it wouldn't be
-       crunchy, now would it?
-   * - Gannet Ripple
-     - 1.99
-     - On a stick!
-
-
-.. _docutils reference: https://docutils.sourceforge.io/docs/ref/rst/directives.html
+Limitations
+=======================
