@@ -10,10 +10,12 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.append(os.path.abspath('.'))
-
+from dotenv import load_dotenv
+from pathlib import Path
+load_dotenv(dotenv_path=Path('..')/'.env')
 
 # -- Project information -----------------------------------------------------
 
@@ -102,3 +104,19 @@ latex_elements = {
     'printindex': r'\footnotesize\raggedright\printindex',
 }
 latex_show_urls = 'footnote'
+
+# sphinxcontrib.confluencebuilder options
+confluence_publish = True
+# confluence_purge = True
+confluence_space_name = 'PINTTEST'
+# Published pages will be placed directly under
+# f"{confluence_space_name}:{confluence_parent_page}"
+# page must already exist
+confluence_parent_page = 'Integrations'
+# confluence_publish_prefix = 'PINT'
+# (or for confluence server)
+confluence_server_url = 'https://docs.eclecticiq.com/'
+confluence_server_user = os.environ.get("USERNAME")
+confluence_server_pass = os.environ.get("PASSWORD")
+
+confluence_disable_xmlrpc = True
