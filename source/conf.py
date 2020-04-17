@@ -44,7 +44,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ["_includes"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -125,10 +125,23 @@ confluence_space_name = 'DEV'
 # f"{confluence_space_name}:{confluence_parent_page}"
 # page must already exist
 confluence_parent_page = 'Build pages with Sphinx and rST'
+
+# Sanity check, so that we are SUPER sure
+# that we're publishing to the correct parent page
+# (to avoid catastrophic content wipes)
+# Get the confluence page id by
+# Going to the page, opening Page Information,
+# and checking the ``pageId=xxx`` query in the
+# URL that appears in the address bar.
+confluence_parent_page_id_check = 41381829
+
 # confluence_publish_prefix = 'PINT'
 # (or for confluence server)
 confluence_server_url = 'https://docs.eclecticiq.com/'
 confluence_server_user = os.environ.get("USERNAME")
 confluence_server_pass = os.environ.get("PASSWORD")
 
+confluence_remove_title = True
+
+# disable for security reasons
 confluence_disable_xmlrpc = True
