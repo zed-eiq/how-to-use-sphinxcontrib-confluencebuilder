@@ -1,0 +1,59 @@
+/*
+Trying to get rid of weird bloated tables and tables
+Also force tables to fit screen width instead expanding to
+fit all cell content in one line.
+
+remaining issues:
+
+-   weird 'margin-bottom:24px' 
+    that I can't target and get rid off in
+    the stub-column cells (``tbody>tr>th>p``)
+-   because the stub-column cells have
+    the weird margin-bottom:24px that we can't
+    get rid of, then we have odd cell sizes
+    that cause ``vertical-align`` to not kick
+    in properly.
+*/
+
+.wy-table-responsive>table.docutils>tbody>tr>*>p,
+.wy-table-responsive table thead>tr>th.head>p {
+    white-space: normal;
+    margin-bottom: 0;
+    margin-top:0;
+    margin-left:0;
+    margin-right:0;
+    text-align: left;
+    vertical-align:top;
+}
+
+.wy-table-responsive {
+    margin-bottom:0;
+    max-width: 100%;
+    overflow: visible;
+    vertical-align:top;
+}
+
+/*
+fixes styling bug where a .. contents:: directive
+would produce a weirdly spaced list with margin-bottom:12px
+*/
+.rst-content div.contents>ul.simple>li>p {
+    margin-bottom:0;
+}
+
+/* improve readability of lists in general */
+.rst-content .section ul>li:last-child {
+    margin-bottom:0.75em;
+}
+
+.rst-content div.contents>ul.simple li>p {
+	margin-bottom:0;
+}
+
+.rst-content ul.simple>li>p {
+    margin-bottom:0 !important;
+}
+
+.wy-table-responsive table {
+    margin-bottom: 1em !important;
+}
