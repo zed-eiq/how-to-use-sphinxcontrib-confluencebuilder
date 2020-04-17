@@ -12,6 +12,18 @@ BUILDDIR      = build
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
+conf:
+	make clean && make confluence
+
+LIVETARGET=html
+PORT=1234
+
+live:
+	sphinx-autobuild -H 0.0.0.0 -p ${PORT} -b ${LIVETARGET} $(SPHINXOPTS) $(0) \
+		$(SOURCEDIR) \
+		$(BUILDDIR)/${LIVETARGET}
+	exit(0)
+
 .PHONY: help Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
