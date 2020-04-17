@@ -13,7 +13,7 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 conf:
-	make clean && make confluence
+	make clean && make confluence && make html
 
 LIVETARGET=html
 PORT=1234
