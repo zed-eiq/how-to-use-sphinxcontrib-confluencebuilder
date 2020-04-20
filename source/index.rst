@@ -11,8 +11,7 @@ Getting started with sphinxcontrib-confluencebuilder
    :caption: Contents:
    :hidden:
 
-   rst-style-guide
-   rst-reference
+   rst/index
 
 ..  contents:: Table of contents
 
@@ -54,17 +53,6 @@ Be warned! The coupling between Sphinx and Confluence is far from perfect.
 
 Use this when you have documentation that is:
 
-:Flat:
-  ..  CAUTION:: This is apparently not true!
-      Setting ``confluence_page_heirarchy=True``
-      tells confluencebuilder to publish page heirarchies,
-      but I *have not* tested this yet!
-
-  The toolchain cannot create a nested page heirarchy.
-  If you need to create a documentation set that has
-  any sort of page heirarchy (i.e. subfolders),
-  you create one Sphinx project
-  per level.
 :Does not use Scroll Versions versioning:
   Versioning with Scroll Versions does not work
   using this toolchain.
@@ -206,7 +194,7 @@ Write content!
 
 Write your content as ``.rst`` files in the ``source/`` folder:
 
-- For an idea of what a rST document looks like, see :doc:`/rst-reference`.
+- For an idea of what a rST document looks like, see :doc:`rst/rst-reference`.
 - You may need a basic grasp of how Sphinx works: https://www.sphinx-doc.org/en/master/usage/quickstart.html
 
   - Sphinx is mostly quite resilient — output gets built
@@ -230,11 +218,7 @@ Write your content as ``.rst`` files in the ``source/`` folder:
 
           rst-reference
 
-- Again, ``sphinxcontrib-confluencebuilder`` cannot publish nested pages.
-  So while Sphinx allows you to do this with subfolders and
-  nested ``toctree`` directives, ``confluencebuilder``
-  automatically flattens your Sphinx project's document heirarchy,
-  so write with that in mind.
+    For more information on ``toctree``s, see `toctree`_
 
 Publish
 ---------
@@ -307,3 +291,95 @@ or if you don't trust the repo 😬:
     # a complete and working Sphinx repo.
     # Set up .env file.
 
+toctree
+=========
+
+``toctree``s are how you set page order and
+heirarchies in Sphinx, and are usually written
+like this:
+
+..  code-block::
+
+    ..  toctree::
+
+        page_one
+        page_two
+
+By default, the confluencebuilder **does not**
+use the toctree to generate a page heirarchy.
+Instead, it takes all pages in the Sphinx project
+and publishes them on Confluence such that:
+
+- **All pages are on the same page hierarchy level.**
+  This means that even if you :ref:`nest` a page
+  one or more ``toctree``s deep, that page is still
+  published at the top level of the page hierarchy,
+  under the ``TARGET_PARENT_PAGE``.
+- Pages are ordered by their page titles on Confluence,
+  alphabetically. This means that if the title of ``index.rst``
+  is "Zebrafish — how to hunt", it is displayed after
+  "How to prepare Zebrafish".
+
+Enable page hierarchy
+-----------------------
+
+To have confluencebuilder respect the ``toctree``
+when publishing to confluence, edit
+``source/conf.py`` and make sure that the
+following parameter is set to ``True``:
+
+..  code-block::
+
+    confluence_page_hierarchy = True
+
+Once page hierarchy is enabled, confluencebuilder
+publishes pages in the order they are listed
+in the ``toctree`` contained in ``index.rst``.
+
+Any pages in the project ``source/`` folder that
+does not have an entry in the ``toctree`` will
+still be published, but is hoisted to the same
+page tree level as ``index.rst``.
+
+.. _nest:
+
+Nested toctrees
+------------------
+
+Not all pages have to be listed in the same
+``toctree`` directive. You can group pages
+by listing them in two or more ``toctree``s
+that serve as the top-level pages for these page groups.
+
+See how we nest the ``rst/`` group of pages in this repository,
+for example:
+
+..  code-block::
+
+    # source/index.rst
+
+    ..  toctree::
+        :maxdepth: 2
+        :caption: Contents:
+        :hidden:
+
+        rst/index
+
+..  code-block::
+
+    # source/rst/index.rst
+
+    ..  toctree::
+
+        rst-reference
+        rst-style-guide
+
+Hide the toctree
+------------------
+
+You can hide the ``toctree`` with the ``:hidden:`` option.
+
+Do this if you need to create a ``toctree`` to define
+the page hierarchy, but don't need to display
+the nested pages because the
+site navigation already takes care of it.

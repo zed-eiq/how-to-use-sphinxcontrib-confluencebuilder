@@ -135,6 +135,14 @@ confluence_parent_page = os.environ.get("TARGET_PARENT_PAGE")
 # URL that appears in the address bar.
 confluence_parent_page_id_check = os.environ.get("TARGET_PARENT_PAGE_ID")
 
+# Enables publishing page heirarchies
+# If set to False, then publishes all pages
+# in flat heirarchy i.e. no ordering and no nesting.
+# Defaults to False; why?
+# When enabled, you *must* have an index.rst
+# that contains a toctree directive.
+confluence_page_hierarchy=True
+
 # confluence_publish_prefix = 'PINT'
 # (or for confluence server)
 confluence_server_url = os.environ.get("CONFLUENCE_SERVER_URL")
