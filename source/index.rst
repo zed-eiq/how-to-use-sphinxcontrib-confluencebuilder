@@ -11,6 +11,7 @@ Getting started with sphinxcontrib-confluencebuilder
    :caption: Contents:
    :hidden:
 
+   rst-style-guide
    rst-reference
 
 ..  contents:: Table of contents
