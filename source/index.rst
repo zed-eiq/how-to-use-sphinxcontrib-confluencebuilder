@@ -99,7 +99,8 @@ You need to:
 
 1. `Set up your project`_
 2. `Configure project`_
-3. `Publish`_
+3. `Write content!`_
+4. `Publish`_
 
 Set up your project
 ----------------------
