@@ -79,7 +79,7 @@ You need:
 - Requests 2.14.0+
 - Sphinx 1.8+
 - python-dotenv to pull environment variables from ``.env``
-(so we don't save our Confluence credentials to the repository).
+  (so we don't save our Confluence credentials to the repository).
 - Confluence Cloud, or Confluence Server 6.7+
 - A user with write permissions to the target Space.
 
@@ -132,7 +132,7 @@ It should look like this:
 
 ..  code-block::
 
-    CONFLUENCE_SERVER_URL="https://example.com"
+    CONFLUENCE_SERVER_URL="https://example.com/"
     USERNAME="confluence_username"
     PASSWORD="confluence_user_password"
 
@@ -192,6 +192,7 @@ Write your content as ``.rst`` files in the ``source/`` folder:
 
 - For an idea of what a rST document looks like, see :doc:`/rst-reference`.
 - You may need a basic grasp of how Sphinx works: https://www.sphinx-doc.org/en/master/usage/quickstart.html
+
   - Sphinx is mostly quite resilient — output gets built
     even if the ``make``/``sphinx-build`` command shows
     several errors/warnings.
@@ -212,6 +213,7 @@ Write your content as ``.rst`` files in the ``source/`` folder:
           :hidden:
 
           rst-reference
+
 - Again, ``sphinxcontrib-confluencebuilder`` cannot publish nested pages.
   So while Sphinx allows you to do this with subfolders and
   nested ``toctree`` directives, ``confluencebuilder``
