@@ -55,6 +55,11 @@ Be warned! The coupling between Sphinx and Confluence is far from perfect.
 Use this when you have documentation that is:
 
 :Flat:
+  ..  CAUTION:: This is apparently not true!
+      Setting ``confluence_page_heirarchy=True``
+      tells confluencebuilder to publish page heirarchies,
+      but I *have not* tested this yet!
+
   The toolchain cannot create a nested page heirarchy.
   If you need to create a documentation set that has
   any sort of page heirarchy (i.e. subfolders),
