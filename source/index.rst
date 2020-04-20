@@ -13,6 +13,7 @@ Getting started with sphinxcontrib-confluencebuilder
 
    rst/index
    reusable-content
+   notes
 
 ..  contents:: Table of contents
 
