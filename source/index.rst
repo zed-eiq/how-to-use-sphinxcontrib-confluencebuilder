@@ -69,6 +69,15 @@ Use this when you have documentation that is:
   docs published using this toolchain,
   and then selectively copy pages over to
   the intended destinations.
+:Manually adding a table of contents is wonky:
+  Using the ``.. contents::`` directive to add
+  a table of contents to the page adds an extra
+  bullet point at the start of the list.
+  
+  This can probably be fixed at the theme/css
+  level.
+
+  This should already be handled by our theme.
 
 Requirements
 ================
