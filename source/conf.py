@@ -19,7 +19,7 @@ load_dotenv(dotenv_path=Path('..')/'.env')
 
 # -- Project information -----------------------------------------------------
 
-project = 'PINT Documentation'
+project = 'Build pages with Sphinx and rST'
 copyright = '2020, EclecticIQ B.V.'
 author = 'EclecticIQ B.V.'
 
@@ -34,9 +34,13 @@ release = '2.7.0'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
-    'sphinx.ext.autodoc',
+    #'sphinx.ext.autodoc',
     'sphinxcontrib.confluencebuilder'
 ]
+
+source_suffix = '.rst'
+
+master_doc = "index"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
