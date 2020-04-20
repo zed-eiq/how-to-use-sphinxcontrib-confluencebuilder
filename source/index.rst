@@ -85,8 +85,10 @@ You need:
 - Sphinx 1.8+
 - python-dotenv to pull environment variables from ``.env``
   (so we don't save our Confluence credentials to the repository).
-- Confluence Cloud, or Confluence Server 6.7+
+- Confluence Server ^6.7, or `Confluence Server <7.2`_
 - A user with write permissions to the target Space.
+
+.. _Confluence Server <7.2: https://github.com/sphinx-contrib/confluencebuilder/issues/312
 
 Getting started
 ================================================
