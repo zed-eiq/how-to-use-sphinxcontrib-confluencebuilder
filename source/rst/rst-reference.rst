@@ -115,7 +115,7 @@ You can also `import a CSV file`_ as a table with the ``csv-table`` directive:
 .. csv-table:: Imported CSV table
    :width: 100%
    :header-rows: 1
-   :file: _includes/test.csv
+   :file: ../_includes/test.csv
 
 .. table:: Truth table for "not"
    :widths: auto
