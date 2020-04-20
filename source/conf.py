@@ -137,7 +137,7 @@ confluence_parent_page_id_check = 41381829
 
 # confluence_publish_prefix = 'PINT'
 # (or for confluence server)
-confluence_server_url = 'https://docs.eclecticiq.com/'
+confluence_server_url = os.environ.get("CONFLUENCE_SERVER_URL")
 confluence_server_user = os.environ.get("USERNAME")
 confluence_server_pass = os.environ.get("PASSWORD")
 
