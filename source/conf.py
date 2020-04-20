@@ -120,11 +120,11 @@ confluence_publish = True
 """
 confluence_purge = False # True
 
-confluence_space_name = 'DEV'
+confluence_space_name = os.environ.get("TARGET_SPACE")
 # Published pages will be placed directly under
 # f"{confluence_space_name}:{confluence_parent_page}"
 # page must already exist
-confluence_parent_page = 'Build pages with Sphinx and rST'
+confluence_parent_page = os.environ.get("TARGET_PARENT_PAGE")
 
 # Sanity check, so that we are SUPER sure
 # that we're publishing to the correct parent page
@@ -133,7 +133,7 @@ confluence_parent_page = 'Build pages with Sphinx and rST'
 # Going to the page, opening Page Information,
 # and checking the ``pageId=xxx`` query in the
 # URL that appears in the address bar.
-confluence_parent_page_id_check = 41381829
+confluence_parent_page_id_check = os.environ.get("TARGET_PARENT_PAGE_ID")
 
 # confluence_publish_prefix = 'PINT'
 # (or for confluence server)
