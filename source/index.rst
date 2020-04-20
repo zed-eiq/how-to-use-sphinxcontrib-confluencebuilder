@@ -12,7 +12,7 @@ Getting started with sphinxcontrib-confluencebuilder
    :hidden:
 
    rst/index
-   includes-example
+   reusable-content
 
 ..  contents:: Table of contents
 
@@ -206,8 +206,8 @@ Write your content as ``.rst`` files in the ``source/`` folder:
     your content may not be built in the way you expect
     it to. Ping `zed <mailto:wtan@eclecticiq.com>`_ if
     you need someone to debug your rST 😬.
-  - Sphinx demands that you add each page to a ``toctree``
-    -- for example, at the top of the source code for this page
+  - Sphinx demands that you add each page to a ``toctree`` --
+    for example, at the top of the source code for this page
     is the following ``toctree`` directive:
 
     ..  code-block::
@@ -219,7 +219,7 @@ Write your content as ``.rst`` files in the ``source/`` folder:
 
           rst-reference
 
-    For more information on ``toctree``s, see `toctree`_
+    For more information on ``toctree``\ s, see `toctree`_
 
 Publish
 ---------
@@ -295,7 +295,7 @@ or if you don't trust the repo 😬:
 toctree
 =========
 
-``toctree``s are how you set page order and
+``toctree``\ s are how you set page order and
 heirarchies in Sphinx, and are usually written
 like this:
 
@@ -313,7 +313,7 @@ and publishes them on Confluence such that:
 
 - **All pages are on the same page hierarchy level.**
   This means that even if you :ref:`nest` a page
-  one or more ``toctree``s deep, that page is still
+  one or more ``toctree``\ s deep, that page is still
   published at the top level of the page hierarchy,
   under the ``TARGET_PARENT_PAGE``.
 - Pages are ordered by their page titles on Confluence,
@@ -349,7 +349,7 @@ Nested toctrees
 
 Not all pages have to be listed in the same
 ``toctree`` directive. You can group pages
-by listing them in two or more ``toctree``s
+by listing them in two or more ``toctree``\ s
 that serve as the top-level pages for these page groups.
 
 See how we nest the ``rst/`` group of pages in this repository,
