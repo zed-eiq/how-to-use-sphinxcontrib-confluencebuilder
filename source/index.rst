@@ -12,6 +12,7 @@ Getting started with sphinxcontrib-confluencebuilder
    :hidden:
 
    rst/index
+   includes-example
 
 ..  contents:: Table of contents
 
