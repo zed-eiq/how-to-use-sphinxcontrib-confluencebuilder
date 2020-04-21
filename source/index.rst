@@ -55,6 +55,21 @@ Be warned! The coupling between Sphinx and Confluence is far from perfect.
 
 Use this when you have documentation that is:
 
+:One-way sync:
+  confluencebuilder only provides one-way sync
+  between your repository and confluence.
+  
+  This forces you to use the Sphinx documentation
+  repository as your single source of truth;
+  YMMV depending on where you lean re: docs-as-code.
+
+  ..  DANGER:: **IMPORTANT** Don't lose track of where the source
+      repository is located!
+
+      sphinxcontrib-confluencebuilder only provides a one-way sync.
+      If you lose the source repository, you either have to stick
+      to editing the content only in Confluence, or manually
+      recreate the repository by copy-pasting content.
 :Does not use Scroll Versions versioning:
   Versioning with Scroll Versions does not work
   using this toolchain.
@@ -192,6 +207,18 @@ It should look like this:
   This acts as a sanity check when hitting publish,
   so that we are doubly sure that we are publishing
   to the correct ``TARGET_PARENT_PAGE``.
+
+  To find the page ID of the ``TARGET_PARENT_PAGE``,
+  navigate to the page in Confluence, and open
+  **Page Information**. The page ID can be found in the
+  URL of the page, which should look like this:
+
+  ..  code-block::
+
+      https://docs.eclecticiq.com/pages/viewinfo.action?pageId=41381991
+
+  Take the value of ``pageId`` — which is ``41381991`` here —
+  and set it as the value of ``TARGET_PARENT_PAGE_ID``.
 
 Write content!
 ----------------
