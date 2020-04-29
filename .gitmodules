@@ -1,0 +1,3 @@
+[submodule "source/private"]
+	path = source/private
+	url = git@github.com:zed-eiq/private-how-to-use-sphinx-confluence-builder.git
