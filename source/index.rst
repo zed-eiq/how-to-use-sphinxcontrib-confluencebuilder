@@ -13,6 +13,7 @@ Getting started with sphinxcontrib-confluencebuilder
 
    rst/index
    reusable-content
+   private/why-docs-as-code
    notes
 
 ..  contents:: Table of contents
