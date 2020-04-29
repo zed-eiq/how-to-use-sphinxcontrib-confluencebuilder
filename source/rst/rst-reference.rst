@@ -7,6 +7,7 @@ Below are examples of how rST is rendered in Confluence.
 
 ..  contents::
     :depth: 2
+    :local:
 
 Text styles
 ==================

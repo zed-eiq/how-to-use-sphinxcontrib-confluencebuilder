@@ -5,6 +5,7 @@ Follow these guidelines to make your life
 working with rST text easier.
 
 ..  contents::
+    :local:
 
 Convert all tabs to spaces
 ================================================

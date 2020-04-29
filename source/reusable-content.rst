@@ -4,6 +4,9 @@ Reusable content
 This page demonstrates how the ``includes`` directive
 can be used to include reusable content.
 
+..  contents::
+    :local:
+
 Text substitutions
 ====================
 
