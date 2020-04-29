@@ -17,6 +17,7 @@ Getting started with sphinxcontrib-confluencebuilder
    notes
 
 ..  contents:: Table of contents
+    :local:
 
 Introduction
 ===============
