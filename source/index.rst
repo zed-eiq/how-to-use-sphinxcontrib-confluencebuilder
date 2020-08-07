@@ -10,11 +10,13 @@ Getting started with sphinxcontrib-confluencebuilder
    :maxdepth: 2
    :caption: Contents:
    :hidden:
+   :glob:
 
    rst/index
    reusable-content
    private/docs-as-code
    notes
+   known-issues/known-issues
 
 ..  contents:: Table of contents
     :local:
