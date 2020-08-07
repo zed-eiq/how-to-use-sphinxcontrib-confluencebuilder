@@ -123,6 +123,11 @@ confluence_publish = True
     repository to it.
 """
 confluence_purge = False # True
+# This tells sphinx to purge only content from the
+# master_doc (page containing the top-level toctree)
+# downwards instead of purging
+# all content the parent page downwards
+confluence_purge_from_master = True
 
 confluence_space_name = os.environ.get("TARGET_SPACE")
 # Published pages will be placed directly under
