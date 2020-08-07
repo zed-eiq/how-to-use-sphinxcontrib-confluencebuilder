@@ -6,3 +6,5 @@ Known issues
     :glob:
 
     ./KI-*
+
+.. _empty:
